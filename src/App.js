@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import HoroscopesContainer from './components/containers/HoroscopesContainer'
 import AffirmationContainer from './components/containers/AffirmationContainer'
 import 'semantic-ui-css/semantic.min.css'
 
@@ -8,8 +9,9 @@ class App extends React.Component {
     return (
       <div>
         <h1>Horoscope Hub<i className="moon outline icon"/></h1>
-        <br />
         <AffirmationContainer />
+        <br />
+        <HoroscopesContainer />
       </div>
     )  
   }
