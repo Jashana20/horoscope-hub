@@ -1,5 +1,6 @@
 import React from 'react'
 import AffirmationCard from '../presentational/AffirmationCard'
+import 'semantic-ui-css/semantic.min.css'
 
 class AffirmationContainer extends React.Component{
 
@@ -32,13 +33,13 @@ class AffirmationContainer extends React.Component{
     render(){
         return (
         <div>
-            <select onChange={this.handleStarSign}>
+            <select className="ui compact menu" onChange={this.handleStarSign}>
                 {this.state.allSigns.map((sign, i) => <option value={sign} key={i}>{sign}</option>)}
             </select>
-            <select onChange={this.handleHoroscopeDay}>
+            <select className="ui compact menu" onChange={this.handleHoroscopeDay}>
                 {this.state.timeFrames.map((time, i) => <option value={time} key={i}>{time}</option>)}
             </select>
-            <button onClick={this.getHoroscope}>Get Horoscope!</button>
+            <button className="ui secondary basic button" onClick={this.getHoroscope}>Get Horoscope!</button>
            <AffirmationCard horoscope={this.state.horoscopes} />
         </div>
         )
